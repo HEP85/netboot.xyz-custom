@@ -11,10 +11,10 @@ menu Please choose an operating system to boot
     item debug Install Proxmox (Debug Mode)
 choose --default normal --timeout 5000 target && goto normal
 :debug
-    kernel http://static.areto.de/proxmox/6.2-1/linux26 vga=791 video=vesafb:ywrap,mtrr ramdisk_size=16777216 linux ext4 maxroot=4 swapsize=4 rw quiet splash=verbose proxdebug initrd=initrd.iso.img
+    kernel http://static.areto.de/proxmox/6.2-1/linux26 vga=791 video=vesafb:ywrap,mtrr ramdisk_size=16777216 rw quiet splash=verbose proxdebug initrd=initrd.iso.img
     goto init
 :normal
-    kernel http://static.areto.de/proxmox/6.2-1/linux26 vga=791 video=vesafb:ywrap,mtrr ramdisk_size=16777216 linux ext4 maxroot=4 swapsize=4  rw quiet splash=silent initrd=initrd.iso.img
+    kernel http://static.areto.de/proxmox/6.2-1/linux26 vga=791 video=vesafb:ywrap,mtrr ramdisk_size=16777216 rw quiet splash=silent initrd=initrd.iso.img
     goto init
 :init
 initrd http://static.areto.de/proxmox/6.2-1/initrd.iso.img
