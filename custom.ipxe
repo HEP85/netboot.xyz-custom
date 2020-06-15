@@ -4,7 +4,7 @@
 ###
 
 :start
-#dhcp
+dhcp
 set serverip 188.40.28.14 //Modify this to match the ip adress or domain of your webserver
 menu Please choose an operating system to boot
     item normal Install Proxmox
